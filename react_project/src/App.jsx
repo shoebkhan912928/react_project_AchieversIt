@@ -3,15 +3,20 @@ import Practice from './Practice.jsx'
 import Header from './component/Header.jsx'
 import Footer from './component/Footer.jsx'
 import Home from './pages/Home.jsx'
+import Cart from './pages/Cart.jsx'
+import Navigations from './navigations/Navigations.jsx'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <div>
-      {/* <h1>App</h1> */}
-      {/* <Practice /> */}
-      <Header/>
-      <Home/>
-      <Footer/>
-      {/* <h1>sijfdslkjv</h1> */}
+      <ToastContainer position="top-center" autoClose={2000} />
+
+      <Header />
+      {/* <Home/> */}
+      <Navigations />
+      <Footer />
+      {/* <Cart/> */}
     </div>
   )
 }

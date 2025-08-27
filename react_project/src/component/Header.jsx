@@ -491,8 +491,12 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+    const cart=useSelector((state)=>state.cartItems.cart)
+    const cartCount=cart.reduce((acc,item)=>acc+item.quantity,0)
   const [showModal, setShowModal] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -542,10 +546,12 @@ const Header = () => {
 
             {/* Cart Icon */}
             <div className="position-relative d-inline-block text-white pe-md-5 px-2">
+            <Link to="/cart">
               <FaShoppingCart size={20} />
               <span className="ooo badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">
-                4
+                {cartCount}
               </span>
+              </Link>
             </div>
 
             {/* User Dropdown */}
