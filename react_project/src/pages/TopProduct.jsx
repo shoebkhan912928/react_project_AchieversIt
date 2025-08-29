@@ -323,6 +323,7 @@ import { globalContext } from "../myCongtext/MyContext";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reduxToolKit-store/productSlice";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const TopProducts = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -388,13 +389,13 @@ const TopProducts = () => {
           {displayedProducts.map((product) => (
             <div key={product.id} className="col-lg-3 col-md-4 col-sm-6 col-12">
               <div className="card h-100 bg-dark border border-white text-white">
-                <a href="./product_details.html">
+                <Link to={`/product/${product.id}`}>
                   <img
                     src={product.images[0]}
                     className="card-img-top"
                     alt={product.title}
                   />
-                </a>
+                </Link>
                 <div className="card-body card_font_s">
                   <div className="pt-2">
                     {[...Array(5)].map((_, i) => (
@@ -439,6 +440,7 @@ const TopProducts = () => {
           )}
         </div>
       </div>
+      
     </div>
   );
 };
