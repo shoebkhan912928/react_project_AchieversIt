@@ -7,6 +7,8 @@ import Cart from './pages/Cart.jsx'
 import Navigations from './navigations/Navigations.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import Advatages from './component/Advatages.jsx'
+import Advantages from './component/Advatages.jsx'
 const App = () => {
   return (
     <div>
@@ -15,6 +17,7 @@ const App = () => {
       <Header />
       {/* <Home/> */}
       <Navigations />
+      <Advantages/>
       <Footer />
       {/* <Cart/> */}
     </div>

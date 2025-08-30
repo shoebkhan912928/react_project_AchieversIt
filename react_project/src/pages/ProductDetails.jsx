@@ -7,6 +7,7 @@ import "./ProductDetails.css";
 import { toast } from "react-toastify";
 import { FaStar } from "react-icons/fa";
 import shoeb from "../assets/shoeb profile.jpg"
+import { Link } from "react-router-dom";
 
 
 const ProductDetails = () => {
@@ -56,15 +57,31 @@ const ProductDetails = () => {
     const product = data.find((item) => item.id.toString() === id);
 
     const [mainImage, setMainImage] = useState(product?.image || "");
-    useEffect(() => {
-        if (product) {
-            if (product.images && product.images.length > 0) {
-                setMainImage(product.images[0]); // ✅ First image active
-            } else {
-                setMainImage(product.image); // fallback
-            }
-        }
-    }, [product]);
+    // useEffect(() => {
+    //     if (product) {
+    //         if (product.images && product.images.length > 0) {
+    //             setMainImage(product.images[0]); // ✅ First image active
+    //         } else {
+    //             setMainImage(product.image); // fallback
+    //         }
+    //     }
+    // }, [product]);
+     const [relatedProducts, setRelatedProducts] = useState([]);
+  useEffect(() => {
+    if (product) {
+      if (product.images && product.images.length > 0) {
+        setMainImage(product.images[0]);
+      } else {
+        setMainImage(product.image);
+      }
+
+      // ✅ filter products by category
+      const filtered = data.filter(
+        (p) => p.category === product.category && p.id !== product.id
+      );
+      setRelatedProducts(filtered);
+    }
+  }, [product, data]);
     if (!product) {
         return (
             <h1 className="text-center text-red-500 text-3xl mt-10">
@@ -290,7 +307,7 @@ const ProductDetails = () => {
                                                         className={i < review.rating ? "text-red-500" : "text-gray-500"}
                                                     />
                                                 ))}
-                                                  <span className="text-gray-400 text-sm">|{review.date}</span>
+                                                <span className="text-gray-400 text-sm">|{review.date}</span>
 
                                             </div>
 
@@ -304,6 +321,66 @@ const ProductDetails = () => {
                     )}
                 </div>
             </div>
+                 <div className="container-fluid bg-dark pb-5">
+        <h3 className="text-center text-white p-4">Related Products</h3>
+
+        <div className="container">
+          <div className="row justify-content-center gx-4 gy-4">
+            {relatedProducts.length > 0 ? (
+              relatedProducts.map((prod) => (
+                <div
+                  key={prod.id}
+                  className="col-lg-3 col-md-4 col-sm-6 col-12"
+                >
+                  <div className="card h-100 bg-dark border border-white text-white">
+                    <Link to={`/product/${prod.id}`}>
+                      <img
+                        src={prod.images?.[0] || prod.image}
+                        className="card-img-top"
+                        alt={prod.title}
+                      />
+                    </Link>
+                    <div className="card-body card_font_s">
+                      <div className="pt-2">
+                        {[...Array(5)].map((_, i) => (
+                          <i
+                            key={i}
+                            className="fas fa-star text-warning"
+                          ></i>
+                        ))}
+                      </div>
+                      <h5 className="card-title">{prod.title}</h5>
+                      <p className="card-text">{prod.info}</p>
+                      <hr />
+                      <h4 className="product_font_head">
+                        ₹{prod.finalPrice}{" "}
+                        <span className="text-muted">
+                          <s className="font_mute_c">
+                            ₹{prod.originalPrice}
+                          </s>
+                        </span>
+                      </h4>
+
+                      <button
+                        type="button"
+                        className="btn card_button_bottom w-100"
+                        onClick={() => { dispatch(addToCart(product)); toast.success(`${product.title} added to cart!`) }}
+                      >
+                        <i className="fas fa-shopping-cart"></i> Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-center text-white">
+                No related products found.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
         </>
     );
 };
