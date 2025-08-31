@@ -9,6 +9,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Advatages from './component/Advatages.jsx'
 import Advantages from './component/Advatages.jsx'
+import TechShop from './pages/AllProduct.jsx'
+import AllProductsPage from './pages/AllProduct.jsx'
 const App = () => {
   return (
     <div>
@@ -17,6 +19,8 @@ const App = () => {
       <Header />
       {/* <Home/> */}
       <Navigations />
+      {/* <TechShop/> */}
+      {/* <AllProductsPage/> */}
       <Advantages/>
       <Footer />
       {/* <Cart/> */}
