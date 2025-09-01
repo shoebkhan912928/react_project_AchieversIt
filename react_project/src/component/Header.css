@@ -243,3 +243,6 @@ body::selection {
 .userSizes{
   font-size: 2.6rem !important;
 }
+.borderseconf{
+  border-color: rgb(35, 38, 40,1) !important;
+}
