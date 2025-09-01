@@ -408,7 +408,7 @@ const ProductCard = ({ item }) => {
 };
 
 // ✅ Sidebar
-const Sidebar = ({ setSort, filters, setFilters }) => {
+const Sidebar = ({ setSort, filters, setFilters, priceRange, setPriceRange }) => {
     const handleCheckboxChange = (type, value) => {
         setFilters((prev) => {
             const newFilters = { ...prev };
@@ -422,7 +422,7 @@ const Sidebar = ({ setSort, filters, setFilters }) => {
     };
 
     return (
-        <div className="bg-black text-white border-r border-gray-700 w-64 p-4 space-y-6">
+        <div className="bg-black text-white border-r border-gray-700 w-64 p-2 space-y-6">
             <div className="overflow-y-scroll y_scrolling bgg">
                 {/* Sort */}
                 <div>
@@ -470,21 +470,41 @@ const Sidebar = ({ setSort, filters, setFilters }) => {
                         ))}
                     </ul>
                 </div>
-                <div><h1>This is </h1></div>
+                <div className=" text-white border-r border-gray-700 w-55 p-2 space-y-6">
+                    {/* other filters ... */}
+
+                    {/* ✅ Price Filter */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-2">Price Range</h4>
+                        <p className="text-gray-300">Up to ₹{priceRange}</p>
+                        <input
+                            type="range"
+                            min="0"
+                            max="20000"
+                            step="500"
+                            value={priceRange}
+                            onChange={(e) => setPriceRange(Number(e.target.value))}
+                            className="w-40"
+                        />
+                        
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
 // ✅ All Products Page
+// In AllProductsPage
 const AllProductsPage = () => {
     const { data } = useContext(globalContext);
 
-    // state for sorting & filtering
     const [sort, setSort] = useState(null);
     const [filters, setFilters] = useState({ brand: [], category: [] });
 
-    // ✅ apply sorting & filtering
+    // ✅ new state for price
+    const [priceRange, setPriceRange] = useState(20000); // max price default
+
     const filteredProducts = useMemo(() => {
         let result = [...data];
 
@@ -498,6 +518,9 @@ const AllProductsPage = () => {
             result = result.filter((p) => filters.category.includes(p.category));
         }
 
+        // ✅ filter by price
+        result = result.filter((p) => p.finalPrice <= priceRange);
+
         // sorting
         if (sort === "lowToHigh") {
             result.sort((a, b) => a.finalPrice - b.finalPrice);
@@ -508,14 +531,12 @@ const AllProductsPage = () => {
         }
 
         return result;
-    }, [data, sort, filters]);
+    }, [data, sort, filters, priceRange]);
 
     return (
         <div className="bg-black min-h-screen text-white flex">
-            {/* Sidebar */}
-            <Sidebar setSort={setSort} filters={filters} setFilters={setFilters} />
+            <Sidebar setSort={setSort} filters={filters} setFilters={setFilters} priceRange={priceRange} setPriceRange={setPriceRange} />
 
-            {/* Products */}
             <div className="flex-1 p-6">
                 <h2 className="text-2xl font-bold mb-6">All Products</h2>
                 {filteredProducts.length === 0 ? (
@@ -531,5 +552,6 @@ const AllProductsPage = () => {
         </div>
     );
 };
+
 
 export default AllProductsPage;

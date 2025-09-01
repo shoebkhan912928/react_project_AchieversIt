@@ -1,5 +1,5 @@
 .y_scrolling {
-    background-color: rgb(42, 41, 41);
+    background-color: rgb(42, 41, 41) !important;
     width: 100%;
 }
 
@@ -61,7 +61,7 @@
 /* --- Tablet and Laptop View Styles (screens 576px and wider) --- */
 @media (min-width: 576px) {
     .y_scrolling {
-        height: 550px; /* Fixed height for tablet/laptop views */
+        height: 500px; /* Fixed height for tablet/laptop views */
         overflow-y: scroll; /* **This is crucial for enabling scrolling and making it visible** */
     }
 
