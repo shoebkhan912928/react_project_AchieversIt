@@ -610,115 +610,115 @@
 //       )}
 
 //       {/* Modal for Login/Signup */}
-//       <Modal show={showModal} onHide={handleClose} centered size="md">
-//         <div className="modal-content bg-dark text-white">
-//           <div className="modal-header border-0">
-//             <button
-//               type="button"
-//               className="btn-close btn-close-white"
-//               onClick={handleClose}
-//             ></button>
-//           </div>
-//           <div className="modal-body px-5">
-//             {isSignup ? (
-//               <div ref={signupRef}>
-//                 <h4 className="fw-bold mb-3 text-center">Sign Up</h4>
-//                 <Button
-//                   variant="secondary"
-//                   className="w-100 mb-3 text-start"
-//                   style={{ background: "white", color: "black" }}
-//                   onClick={toggleToLogin}
-//                 >
-//                   Already have an account?{" "}
-//                   <span className="text-info fw-bolder">Login</span>
-//                 </Button>
+      // <Modal show={showModal} onHide={handleClose} centered size="md">
+      //   <div className="modal-content bg-dark text-white">
+      //     <div className="modal-header border-0">
+      //       <button
+      //         type="button"
+      //         className="btn-close btn-close-white"
+      //         onClick={handleClose}
+      //       ></button>
+      //     </div>
+      //     <div className="modal-body px-5">
+      //       {isSignup ? (
+      //         <div ref={signupRef}>
+      //           <h4 className="fw-bold mb-3 text-center">Sign Up</h4>
+      //           <Button
+      //             variant="secondary"
+      //             className="w-100 mb-3 text-start"
+      //             style={{ background: "white", color: "black" }}
+      //             onClick={toggleToLogin}
+      //           >
+      //             Already have an account?{" "}
+      //             <span className="text-info fw-bolder">Login</span>
+      //           </Button>
 
-//                 <Form>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="text"
-//                       placeholder="Username"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="email"
-//                       placeholder="Email"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="password"
-//                       placeholder="Password"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="password"
-//                       placeholder="Confirm Password"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Button
-//                     type="submit"
-//                     className="btn btn-danger w-100 mb-3"
-//                     style={{ padding: "12px", fontSize: "1.2rem" }}
-//                   >
-//                     Sign Up
-//                   </Button>
-//                 </Form>
-//               </div>
-//             ) : (
-//               <div ref={loginRef}>
-//                 <h4 className="fw-bold mb-3 text-center">Log In</h4>
-//                 <Button
-//                   variant="secondary"
-//                   className="w-100 mb-3 text-start"
-//                   style={{ background: "white", color: "black" }}
-//                   onClick={toggleToSignup}
-//                 >
-//                   Don't have an account?{" "}
-//                   <span className="text-info fw-bolder">Sign Up</span>
-//                 </Button>
+      //           <Form>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="text"
+      //                 placeholder="Username"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="email"
+      //                 placeholder="Email"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="password"
+      //                 placeholder="Password"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="password"
+      //                 placeholder="Confirm Password"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Button
+      //               type="submit"
+      //               className="btn btn-danger w-100 mb-3"
+      //               style={{ padding: "12px", fontSize: "1.2rem" }}
+      //             >
+      //               Sign Up
+      //             </Button>
+      //           </Form>
+      //         </div>
+      //       ) : (
+      //         <div ref={loginRef}>
+      //           <h4 className="fw-bold mb-3 text-center">Log In</h4>
+      //           <Button
+      //             variant="secondary"
+      //             className="w-100 mb-3 text-start"
+      //             style={{ background: "white", color: "black" }}
+      //             onClick={toggleToSignup}
+      //           >
+      //             Don't have an account?{" "}
+      //             <span className="text-info fw-bolder">Sign Up</span>
+      //           </Button>
 
-//                 <Form>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="email"
-//                       placeholder="Email"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Form.Group className="mb-3">
-//                     <Form.Control
-//                       type="password"
-//                       placeholder="Password"
-//                       className="bg-dark text-white"
-//                     />
-//                   </Form.Group>
-//                   <Button
-//                     type="submit"
-//                     className="btn btn-danger w-100 mb-3"
-//                     style={{ padding: "12px", fontSize: "1.2rem" }}
-//                   >
-//                     Log In
-//                   </Button>
-//                 </Form>
-//               </div>
-//             )}
+      //           <Form>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="email"
+      //                 placeholder="Email"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Form.Group className="mb-3">
+      //               <Form.Control
+      //                 type="password"
+      //                 placeholder="Password"
+      //                 className="bg-dark text-white"
+      //               />
+      //             </Form.Group>
+      //             <Button
+      //               type="submit"
+      //               className="btn btn-danger w-100 mb-3"
+      //               style={{ padding: "12px", fontSize: "1.2rem" }}
+      //             >
+      //               Log In
+      //             </Button>
+      //           </Form>
+      //         </div>
+      //       )}
 
-//             <div className="text-center my-3">or login with</div>
-//             <div className="d-flex justify-content-between">
-//               <Button className="w-100 mx-1 button_facebook">Facebook</Button>
-//               <Button className="w-100 mx-1 button_google">Google</Button>
-//               <Button className="w-100 mx-1 button_twitter">Twitter</Button>
-//             </div>
-//           </div>
-//         </div>
-//       </Modal>
+      //       <div className="text-center my-3">or login with</div>
+      //       <div className="d-flex justify-content-between">
+      //         <Button className="w-100 mx-1 button_facebook">Facebook</Button>
+      //         <Button className="w-100 mx-1 button_google">Google</Button>
+      //         <Button className="w-100 mx-1 button_twitter">Twitter</Button>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </Modal>
 //     </>
 //   );
 // };
@@ -895,6 +895,115 @@ const Header = () => {
 
 
       {/* Modal for Login/Signup (your existing modal code) */}
+      <Modal show={showModal} onHide={handleClose} centered size="md">
+        <div className="modal-content bg-dark text-white">
+          <div className="modal-header border-0">
+            <button
+              type="button"
+              className="btn-close btn-close-white"
+              onClick={handleClose}
+            ></button>
+          </div>
+          <div className="modal-body px-5">
+            {isSignup ? (
+              <div ref={signupRef}>
+                <h4 className="fw-bold mb-3 text-center">Sign Up</h4>
+                <Button
+                  variant="secondary"
+                  className="w-100 mb-3 text-start"
+                  style={{ background: "white", color: "black" }}
+                  onClick={toggleToLogin}
+                >
+                  Already have an account?{" "}
+                  <span className="text-info fw-bolder">Login</span>
+                </Button>
+
+                <Form>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="text"
+                      placeholder="Username"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="email"
+                      placeholder="Email"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="password"
+                      placeholder="Password"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="password"
+                      placeholder="Confirm Password"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Button
+                    type="submit"
+                    className="btn btn-danger w-100 mb-3"
+                    style={{ padding: "12px", fontSize: "1.2rem" }}
+                  >
+                    Sign Up
+                  </Button>
+                </Form>
+              </div>
+            ) : (
+              <div ref={loginRef}>
+                <h4 className="fw-bold mb-3 text-center">Log In</h4>
+                <Button
+                  variant="secondary"
+                  className="w-100 mb-3 text-start"
+                  style={{ background: "white", color: "black" }}
+                  onClick={toggleToSignup}
+                >
+                  Don't have an account?{" "}
+                  <span className="text-info fw-bolder">Sign Up</span>
+                </Button>
+
+                <Form>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="email"
+                      placeholder="Email"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      type="password"
+                      placeholder="Password"
+                      className="bg-dark text-white"
+                    />
+                  </Form.Group>
+                  <Button
+                    type="submit"
+                    className="btn btn-danger w-100 mb-3"
+                    style={{ padding: "12px", fontSize: "1.2rem" }}
+                  >
+                    Log In
+                  </Button>
+                </Form>
+              </div>
+            )}
+
+            <div className="text-center my-3">or login with</div>
+            <div className="d-flex justify-content-between">
+              <Button className="w-100 mx-1 button_facebook">Facebook</Button>
+              <Button className="w-100 mx-1 button_google">Google</Button>
+              <Button className="w-100 mx-1 button_twitter">Twitter</Button>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };
