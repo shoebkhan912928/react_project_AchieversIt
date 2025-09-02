@@ -794,7 +794,7 @@ const Header = () => {
 
             {/* Cart Icon */}
             <div className="position-relative d-inline-block text-white pe-md-5 px-2">
-              <Link to="/cart">
+              <Link to="/cart " className="linknoness">
                 <FaShoppingCart size={20} />
                 <span className="ooo badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">
                   {cartCount}
@@ -813,7 +813,7 @@ const Header = () => {
 
               {dropdownOpen && (
                 <div
-                  className="position-absolute end-0 mt-3 bg-dark text-white p-3 rounded shadow"
+                  className="position-absolute end-0 mt-3 bg-dark text-white p-3 rounded boooo"
                   style={{ width: "18rem", zIndex: 999 }}
                 >
                   <h4 className="mb-1">Hello!</h4>
@@ -825,7 +825,7 @@ const Header = () => {
                   >
                     Login / Signup
                   </Button>
-                  <hr className="text-muted" />
+                  <hr className="text-mut" />
                   <p className="mb-0">Please Login</p>
                 </div>
               )}
