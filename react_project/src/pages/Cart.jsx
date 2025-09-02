@@ -338,6 +338,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { increaseQty, decreaseQty, removeFromCart } from "../reduxToolKit-store/productSlice";
+import { BsCartX } from "react-icons/bs";
 import "./Cart.css";
 const Cart = () => {
   const dispatch = useDispatch();
@@ -353,12 +354,16 @@ const Cart = () => {
       {cart.length === 0 ? (
         // ✅ Empty Cart UI
         <div>
-          <h1 className="text-center text-blue-500 text-4xl font-bold py-10">
+          <div className="textttt">
+            {/* <i class="fa-sharp fa-solid fa-cart-xmark lllttr" style={{color: "#e60a0a"}}></i> */}
+            <BsCartX className="gjhjgf " />
+          </div>
+          <h1 className="text-center text-white text-4xl font-bold pt-18">
             Your cart is empty
           </h1>
-          <div className="w-full flex justify-center mt-10">
-            <Link to="/">
-              <button className="bg-green-50 border text-4xl flex items-center gap-5 font-bold py-4 px-8">
+          <div className="w-full flex justify-center mt-4 ghhh">
+            <Link to="/Allproduct" className="qpqp" >
+              <button className="bg-red-500 border rounded-4 text-4xl flex text-white fonbol items-center gap-5 font-bold py-4 px-8">
                 <FaArrowLeftLong />
                 Continue Shopping
               </button>

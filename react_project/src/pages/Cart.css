@@ -87,3 +87,27 @@
         scrollbar-color: #ff4500 rgb(60, 60, 60); /* thumb color (red) track color (dark gray) */
     }
 }
+.gjhjgf{
+    width: 200px !important;
+    height: 250px !important;
+    margin-bottom: -70px;
+    /* background-color: aqua !important; */
+    color:#e60a0a !important;
+    /* text-align: center; */
+    /* display: flex; */
+    /* border-radius: 50% !important; */    
+}
+.textttt{
+     display: flex;
+    justify-content: center;
+
+}
+.fonbol{
+    font-size: 15px;
+    background-color: #e60a0a !important;
+      
+}
+.qpqp{
+    text-decoration: none !important;
+}
+

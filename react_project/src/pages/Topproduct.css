@@ -224,3 +224,6 @@ body {
  /* background-color: #ea061d !important; */
  text-decoration: none !important;
 }
+.card_button_bottom:hover{
+  background-color: green !important;
+}

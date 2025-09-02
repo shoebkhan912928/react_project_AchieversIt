@@ -194,12 +194,12 @@ const ProductDetails = () => {
                 </div>
 
             </div>
-            <div className="bg-black text-white p-6 ">
+            <div className="bg-black text-white p-6  ">
                 {/* Tabs */}
                 <div className="flex justify-center gap-10 ppppp  mb-6">
                     <button
                         onClick={() => handleTabClick("specifications")}
-                        className={`px-6 py-2 text-lg font-semibold rounded gappppp transition
+                        className={`px-6 u py-2 text-lg font-semibold rounded gappppp transition
             ${activeTab === "specifications" ? "bg-orange-500" : "bg-transparent"}
           `}
                     >
@@ -234,8 +234,8 @@ const ProductDetails = () => {
                         //     <p><strong>Connectivity:</strong> Wireless</p>
                         //     <p><strong>Microphone:</strong> Yes</p>
                         // </div>
-                        <div className="grid grid-cols-2 gap-4 text-white w-[600px]">
-                            <p className="font-light">Brand</p>
+                        <div className="grid grid-cols-2 gap-2 text-white specificationWidth w-[600px]">
+                            <p className="font-light paddingbrand">Brand</p>
                             <p className="font-light">{product.brand}</p>
 
                             <p className="font-light">Model</p>

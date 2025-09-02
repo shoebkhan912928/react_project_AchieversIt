@@ -361,6 +361,7 @@ import { addToCart } from "../reduxToolKit-store/productSlice";
 import { globalContext } from "../myCongtext/MyContext";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import "./Allproduct.css"
 
 // ✅ Product Card
 const ProductCard = ({ item }) => {
@@ -397,7 +398,7 @@ const ProductCard = ({ item }) => {
                 </div>
 
                 <button
-                    className="bg-red-600 hover:bg-red-700 w-full mt-3 py-2 rounded-lg"
+                    className="bg-red-600 hover:bg-green-500 w-full mt-3 py-2 rounded-lg"
                     onClick={() => handleAddToCart(item)}
                 >
                     <i className="fas fa-shopping-cart"></i> Add to Cart
@@ -534,7 +535,7 @@ const AllProductsPage = () => {
     }, [data, sort, filters, priceRange]);
 
     return (
-        <div className="bg-black min-h-screen text-white flex">
+        <div className="bg-black min-h-screen text-white allprodctsdisplay flex">
             <Sidebar setSort={setSort} filters={filters} setFilters={setFilters} priceRange={priceRange} setPriceRange={setPriceRange} />
 
             <div className="flex-1 p-6">

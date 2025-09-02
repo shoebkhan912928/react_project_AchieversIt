@@ -195,6 +195,11 @@ body {
         font-size: 1.4rem;
         margin-right: 8px;
       }
+      .allprodctsdisplay{
+        display: block !important;
+        /* width: 10px !important; */
+        /* height: 20px !important; */
+      }
 
       .text-box .feature-title {
         font-size: 0.55rem;
@@ -216,6 +221,6 @@ body {
     /* body{
         background-color: aliceblue !important;
     } */
-     .bgg{
+     /* .bgg{
         height: 10px !important;
-     }
+     } */
