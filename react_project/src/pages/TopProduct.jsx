@@ -115,7 +115,7 @@ const TopProducts = () => {
                 <div className="card-body card_font_s d-flex flex-column align-items-center justify-content-center">
                 <Link to="/Allproduct" className="yyy"> <h2 className="card-title text-white ">
                     Browse all <br /> Product{" "}
-                    <i class="fa-solid fa-arrow-right-long bgggg"></i>
+                    <i className="fa-solid fa-arrow-right-long bgggg"></i>
                   </h2>
                   </Link> 
                 </div>

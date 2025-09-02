@@ -21,7 +21,7 @@ const Cart = () => {
         // ✅ Empty Cart UI
         <div>
           <div className="textttt">
-            {/* <i class="fa-sharp fa-solid fa-cart-xmark lllttr" style={{color: "#e60a0a"}}></i> */}
+            {/* <i className="fa-sharp fa-solid fa-cart-xmark lllttr" style={{color: "#e60a0a"}}></i> */}
             <BsCartX className="gjhjgf " />
           </div>
           <h1 className="text-center text-white text-4xl font-bold pt-18">
