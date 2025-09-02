@@ -253,3 +253,12 @@ body::selection {
 .borderseconf{
   border-color: rgb(35, 38, 40,1) !important;
 }
+.linknoness{
+  /* text-decoration:none !important; */
+  /* background-color: red !important; */
+  color: aliceblue !important;
+  /* padding: 500px !important;  */
+}
+.boooo{
+ border: 2px solid white;
+}
