@@ -295,7 +295,7 @@ body, html {
   .product_details_stock_button{
    margin-right: 60px;
    /* padding: 40px; */
-   width: 90px;
+   width: 120px;
   }
   .image-wrapper {
     flex-direction: row;
@@ -341,7 +341,7 @@ body, html {
   .main-image {
     width: 80vw; /* adjust as needed */
     height: 40vh;
-    padding-top: 70px;
+    padding-top: 10px;
     padding-left: 40px;
   }
 
@@ -351,13 +351,15 @@ body, html {
 
   .product_details_right {
     width: 90vw;
-    margin: 20px auto 0;
+    /* margin: 20px auto 0; */
     
   }
   .product_details_stock_button{
-   margin-right: 60px;
+   margin-right: 22px;
    /* padding: 40px; */
    width: 90px;
+   font-size: 10px;
+   margin-top: 40px !important;
 
   }
   .font_size_product{
@@ -366,6 +368,18 @@ body, html {
   }
   .product_details_rigth_button{
    width: 150px;
+  }
+  .gappppp{
+   /* margin: -20px; */
+   /* gap: -0px !important; */
+   margin-right: -60px;
+   /* padding: 40px !important; */
+   /* padding: 10px 10px 10px 10px ; */
+
+  }
+  .ppppp{
+   /* padding-left: -60px !important; */
+   margin-left: -40px;
   }
   .pp{
    margin-left: -250px;

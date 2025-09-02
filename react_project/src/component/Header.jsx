@@ -803,7 +803,7 @@ const Header = () => {
             </div>
 
             {/* User Dropdown */}
-            <div className="position-relative">
+            <div className="position-relative userspa">
               <FaUser
                 size={22}
                 color="white"
@@ -839,7 +839,7 @@ const Header = () => {
       {/* Search Bar */}
       {searchOpen && (
         <div
-          className="position-absolute start-50 translate-middle-x w-50 bg-dark p-3 rounded shadow"
+          className="position-absolute start-50 translate-middle-x w-50 searchboxx bg-dark p-3 rounded shadow"
           style={{ top: "70px", zIndex: 100 }}
         >
           <div className="position-relative">

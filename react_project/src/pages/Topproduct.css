@@ -135,10 +135,13 @@ body {
       background-color: rgba(208, 6, 6, 0.999) !important;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 426px) {
       .button-container {
         gap: 8px;
         padding: 0 5px;
+      }
+      .linkcolor{
+        /* color: #ea061d !important; */
       }
 
       .button-container button {
@@ -212,3 +215,12 @@ body {
       background-color: red;
       color: white;
     }
+.bgggg{
+  /* background-color: #ea061d; */
+  width: 50px !important;
+
+}
+.yyy{
+ /* background-color: #ea061d !important; */
+ text-decoration: none !important;
+}

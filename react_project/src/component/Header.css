@@ -187,6 +187,13 @@ body::selection {
     font-size: 0.5rem !important;
     padding: 0.5rem 0.5rem 0.5rem 0.3rem !important;
   }
+  .userspa{
+    padding-left: 1rem;
+  }
+  .searchboxx{
+    width: 100% !important;
+    margin-top: 2px;
+  }
 
   .button_google {
     font-size: 0.5rem !important;

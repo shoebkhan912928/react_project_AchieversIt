@@ -1,1 +1,14 @@
 @import "tailwindcss";
+.discountprice{
+    color: rgb(102, 102, 105) !important;
+}
+.marginButton{
+    margin-left: 12rem !important;
+}
+@media (max-width:426px){
+    .crouserwidth{
+        width: 250px;
+        margin-bottom: -120px;
+        margin-top: -50px;
+    }
+}

@@ -194,12 +194,12 @@ const ProductDetails = () => {
                 </div>
 
             </div>
-            <div className="bg-black text-white p-6">
+            <div className="bg-black text-white p-6 ">
                 {/* Tabs */}
-                <div className="flex justify-center gap-10 mb-6">
+                <div className="flex justify-center gap-10 ppppp  mb-6">
                     <button
                         onClick={() => handleTabClick("specifications")}
-                        className={`px-6 py-2 text-lg font-semibold rounded transition
+                        className={`px-6 py-2 text-lg font-semibold rounded gappppp transition
             ${activeTab === "specifications" ? "bg-orange-500" : "bg-transparent"}
           `}
                     >
@@ -207,7 +207,7 @@ const ProductDetails = () => {
                     </button>
                     <button
                         onClick={() => handleTabClick("overview")}
-                        className={`px-6 py-2 text-lg font-semibold rounded transition
+                        className={`px-6 py-2 text-lg font-semibold rounded gappppp transition
             ${activeTab === "overview" ? "bg-orange-500" : "bg-transparent"}
           `}
                     >
@@ -215,7 +215,7 @@ const ProductDetails = () => {
                     </button>
                     <button
                         onClick={() => handleTabClick("reviews")}
-                        className={`px-6 py-2 text-lg font-semibold rounded transition
+                        className={`px-6 py-2 text-lg font-semibold rounded gappppp transition
             ${activeTab === "reviews" ? "bg-orange-500" : "bg-transparent"}
           `}
                     >
