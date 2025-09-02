@@ -88,7 +88,7 @@ const productsData = [
             fourth,
         ],
         brand: "JBL",
-        title: "JBL Live 660NC",
+        title: "JB Live 660NC",
         info: "Wireless Over-Ear NC Headphones",
         category: "Headphones",
         type: "Over Ear",
